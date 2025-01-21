@@ -62,8 +62,15 @@ nav ul li a:hover::after {
 .text-box {
   color: #fff;
   position: absolute;
-  bottom: 8%;
+  bottom: 20%; /* Shifted upwards */
 }
+
+.text-box p.good-night {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px; /* Added spacing for clarity */
+}
+
 .text-box p {
   font-size: 50px;
   font-weight: 600;
@@ -84,9 +91,24 @@ nav ul li a:hover::after {
     background-position: 2000px 0;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .text-box h4 {
   font-size: 40px;
   font-weight: 500;
+  line-height: 50px;
+}
+.animated-sentence {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 .text-box .row {
   display: flex;
